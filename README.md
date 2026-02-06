@@ -1,6 +1,6 @@
 # MCP Apps Server
 
-[![Deploy to mcp-use](https://cdn.mcp-use.com/deploy.svg)](https://mcp-use.com/deploy/start?repository-url=https%3A%2F%2Fgithub.com%2Fmcp-use%2Fmcp-use%2Ftree%2Fmain%2Flibraries%2Ftypescript%2Fpackages%2Fcreate-mcp-use-app%2Fsrc%2Ftemplates%2Fmcp-apps&branch=main&project-name=mcp-apps-template&build-command=npm+install&start-command=npm+run+build+%26%26+npm+run+start&port=3000&runtime=node&base-image=node%3A20)
+[![Deploy to mcp-use](https://cdn.mcp-use.com/deploy.svg)](https://mcp-use.com/deploy/start?repository-url=https%3A%2F%2Fgithub.com%2Fmcp-use%2Fmcp-use%2Ftree%2Fmain%2Flibraries%2Ftypescript%2Fpackages%2Fcreate-mcp-use-app%2Fsrc%2Ftemplates%2Fmcp-apps&branch=main&project-name=mcp-apps-template&build-command=npm+install&start-command=npm+run+build+%26%26+npm+run+start&port=3100&runtime=node&base-image=node%3A20)
 
 An MCP server template with OpenAI Apps SDK integration for ChatGPT-compatible widgets.
 
@@ -43,7 +43,7 @@ npm run dev
 ```
 
 This starts:
-- MCP server on port 3000
+- MCP server on port 3100
 - Widget serving at `/mcp-use/widgets/*`
 - Inspector UI at `/inspector`
 
@@ -345,12 +345,12 @@ server.tool({
 ### Via Inspector UI
 
 1. Start the server: `npm run dev`
-2. Open: `http://localhost:3000/inspector`
+2. Open: `http://localhost:3100/inspector`
 3. Test widgets interactively
 
 ### Direct Browser Access
 
-Visit: `http://localhost:3000/mcp-use/widgets/display-weather`
+Visit: `http://localhost:3100/mcp-use/widgets/display-weather`
 
 ### Via MCP Client
 
@@ -358,7 +358,7 @@ Visit: `http://localhost:3000/mcp-use/widgets/display-weather`
 import { createMCPClient } from 'mcp-use/client';
 
 const client = createMCPClient({
-  serverUrl: 'http://localhost:3000/mcp',
+  serverUrl: 'http://localhost:3100/mcp',
 });
 
 await client.connect();
