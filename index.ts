@@ -97,6 +97,11 @@ server.tool(
   }
 );
 
+import { registerDockerTools } from "./docker-tools";
+
+// Register Docker tools
+registerDockerTools(server);
+
 server.listen(3100).then(() => {
   console.log(`Server running`);
 });
