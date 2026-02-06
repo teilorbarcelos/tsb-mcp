@@ -16,9 +16,20 @@
     "skipLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@/*": ["src/*"]
+      "@/*": [
+        "src/*"
+      ]
     }
   },
-  "include": ["index.ts", "src/**/*", "resources/**/*", "server.ts"],
-  "exclude": ["node_modules", "dist"]
+  "include": [
+    "index.ts",
+    "docker-tools.ts",
+    "src/**/*",
+    "resources/**/*",
+    "server.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
 }
