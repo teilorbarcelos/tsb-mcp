@@ -97,10 +97,16 @@ server.tool(
   }
 );
 
-import { registerDockerTools } from "./docker-tools";
+import { registerDockerTools } from "./src/tools/docker";
+import { registerFsTools } from "./src/tools/fs";
+import { registerBashTools } from "./src/tools/bash";
 
 // Register Docker tools
 registerDockerTools(server);
+// Register FS tools
+registerFsTools(server);
+// Register Bash tools
+registerBashTools(server);
 
 server.listen(3100).then(() => {
   console.log(`Server running`);
