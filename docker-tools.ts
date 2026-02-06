@@ -1,4 +1,3 @@
-// @ts-ignore
 import Docker from 'dockerode';
 import { MCPServer, object } from 'mcp-use/server';
 import { z } from 'zod';
